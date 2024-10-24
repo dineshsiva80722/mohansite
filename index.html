@@ -1,1 +1,607 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="cssanimation/cssanimation.min.css">
+  <link rel="stylesheet" href="cssanimation/">
+  <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="cssanimation/cssanimation.css">
+  <style>
+    body {
+      background: #292526;
+      overflow-x: hidden;
+    }
+
+
+    #allpage {
+      background: #635b5d;
+    }
+
+    .menubar {
+      height: 1px;
+      overflow: hidden;
+
+      transition: height 0.5s ease;
+
+    }
+
+    .menubar.open {
+      height: 40rem;
+      width: 10rem;
+
+      /* Set to desired height when open */
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <nav id="mouseleaveaction" class="fixed w-[30rem] m-10 h-[55rem]  ">
+    <div
+      class="-rotate-90 top-[25rem] rounded-br-full rounded-tl-full relative bg-black w-[50rem] align-middle items-center text-center -left-80 h-32 flex">
+      <h1 class="text-4xl font-bold text-lime-500 mx-auto font-serif">Mohan Kumar Portfolio</h1>
+      <button class="rotate-90 relative right-20" id="menuToggle">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#34C759"
+          class="size-9">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="bg-black menubar w-[10rem] text-white relative top-7 left-40 rounded-tr-full rounded-br-full rounded-bl-full text-center p-5">
+      <ul class="p-2 text-center ">
+        <li id="homeborder" class="font-bold pt-16 text-xl  ">
+          <h1 class="cursor-pointer hover:underline text-center" id="homebtn">Home</h1>
+        </li>
+        <li id="aboutborder" class="font-bold pt-16 text-xl">
+          <h1 class="cursor-pointer hover:underline " id="aboutbtn">About me</h1>
+
+        <li id="skillborder" class="font-bold pt-16 text-xl">
+          <h1 class="cursor-pointer hover:underline " id="skillbtn">Skills</h1>
+        </li>
+        <li id="projectborder" class="font-bold pt-16 text-xl">
+          <h1 class="cursor-pointer hover:underline " id="projectbtn">Projects</h1>
+        </li>
+        <li id="certiborder" class="font-bold pt-16 text-xl">
+          <h1 class="cursor-pointer hover:underline " id="certificatbtn">Certificates</h1>
+        </li>
+        <li id="contactborder" class="font-bold pt-16 text-xl">
+          <h1 class="cursor-pointer hover:underline " id="contactbtn">Contact</h1>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+  <hr style="opacity: 0;" id="smtargettop">
+
+  <div id="herosection"
+    class="herosection flex justify-center gap-40 h-[67rem]  place-content-center  place-self-center">
+    <div class="image  overflow-hidden lg:w-96 lg:h-96  w-60 h-60 place-self-center m-10 rounded-full">
+      <img src="img/mohan.png" alt="" srcset="">
+    </div>
+
+    <div class="text-center mx-auto  place-self-center   h-96 ">
+      <h1 class="weclcome  text-white text-center font-semibold text-2xl lg:py-5 p-2 ">Hello, I'm </h1>
+      <h1 class="name text-4xl  font-bold text-white text-center tracking-wider lg:py-2  ">Mohan Kumar M</h1>
+      <h1
+        class="accupation text-3xl text-white text-center p-3 font-semibold tracking-wide place-self-center cssanimation lePushReleaseFromLeft sequence">
+        Data Analyst
+      </h1>
+      <div class="flex justify-center gap-3   mt-10  ">
+        <a href="img/Mohankumar-CV.pdf" download="Mohankumar-CV.pdf">
+          <button
+            class="border rounded-3xl text-gray-400 lg:text-xl font-bold border-black hover:bg-gray-500 hover:text-white   transition  duration-200 ease-in text-center lg:px-7  px-4  py-3">Download
+            Resume</button>
+        </a>
+        <button
+          class="border rounded-3xl font-bold lg:text-xl border-black bg-black text-white hover:bg-zinc-500  transition  duration-200 ease-in   text-center lg:px-7   px-4  py-3">DM
+          for ME</button>
+      </div>
+      <div class="links flex justify-center p-5 gap-10">
+        <a href="">
+          <button
+            class="mx-auto p-3 w-12 bg-gray-800 hover:bg-black hover:text-white transition  duration-200 ease-in  shadow-xl rounded-full text-center align-middle h-12">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="#fff" width="25" height="25"
+              viewBox="0 0 30 30">
+              <path
+                d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z">
+              </path>
+            </svg>
+          </button>
+        </a>
+        <a href="">
+          <button id="targetabout"
+            class="w-12 p-3 bg-gray-800 hover:bg-black hover:text-white transition  duration-200 ease-in  shadow-xl   rounded-full text-center align-middle   h-12">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" fill="#fff"
+              viewBox="0 0 50 50">
+              <path
+                d="M12 23.403V23.39 10.389L11.88 10.3h-.01L9.14 8.28C7.47 7.04 5.09 7.1 3.61 8.56 2.62 9.54 2 10.9 2 12.41v3.602L12 23.403zM38 23.39v.013l10-7.391V12.41c0-1.49-.6-2.85-1.58-3.83-1.46-1.457-3.765-1.628-5.424-.403L38.12 10.3 38 10.389V23.39zM14 24.868l10.406 7.692c.353.261.836.261 1.189 0L36 24.868V11.867L25 20l-11-8.133V24.868zM38 25.889V41c0 .552.448 1 1 1h6.5c1.381 0 2.5-1.119 2.5-2.5V18.497L38 25.889zM12 25.889L2 18.497V39.5C2 40.881 3.119 42 4.5 42H11c.552 0 1-.448 1-1V25.889z">
+              </path>
+            </svg>
+          </button>
+        </a>
+
+      </div>
+    </div>
+  </div>
+  <div id="tothetopbtn"  class=" w-20  p-5 place-self-end top-[50rem] sticky">
+      <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+        stroke="#fff" class="size-2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+      </svg>
+  </div>
+
+  <div class=" w-screen">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#00cba9" fill-opacity="1"
+          d="M0,256L60,234.7C120,213,240,171,360,154.7C480,139,600,149,720,176C840,203,960,245,1080,256C1200,267,1320,245,1380,234.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+        </path>
+      </svg>
+
+    </div>
+
+    <div class="" style="background-color: #00cba9;">
+
+      <div id="abouttarget" class="p-3 lg:p-8 font-mono   about">
+        <h1 class="text-2xl lg:text-4xl text-white text-center">Get To Know More</h1>
+        <h1 class="text-3xl lg:text-5xl font-bold text-yellow-400  text-center  p-5 lg:p-8">About Me</h1>
+        <div class="flex">
+          <div
+            class="aboutmecontainer rounded-xl w-96  lg:w-[40rem] lg:h-[30rem] tracking-wide p-5 lg:p-10  relative top-52 mx-auto bg-black">
+            <p class="font-sans text-white text-2xl text-justify">
+              Recent computer science engineering graduate with strong technical skills and a passion for data analysis.
+              Looking for a challenging career that demands the best of my professional ability in terms of technical
+              and
+              analytical skills and helps me in broadening and enhancing my current skills and knowledge.
+            </p>
+          </div>
+
+          <div
+            class="educationcontainer rounded-xl w-96 lg:w-[40rem] lg:h-[30rem] h-auto relative top-0 text-white tracking-wide right-32  place-self-center p-10 bg-black">
+            <div class="design border h-[23rem] relative top-4 border-black  bg-blue-400 rounded-xl p-5 lg:p-10">
+              <h1 class="text-xl lg:text-2xl">Education</h1>
+              <h1 class="text-lg lg:text-xl">Gnanamani College of Technology</h1>
+              <div class="flex justify-around gap-5 lg:justify-between">
+                <h1>Namakkal</h1>
+                <h1>2021-2024</h1>
+              </div>
+              <h1>CGPA: 7.2</h1>
+            </div>
+
+            <div
+              class=" w-36 lg:w-44 p-2 relative left-52 lg:left-96 align-middle items-center justify-center gap-1 -top-5 mt-1 flex rounded-tl-xl  bg-black h-8 lg:h-10">
+              <div class="w-3 h-3 lg:w-4 lg:h-4 bg-white rounded-full"></div>
+              <div class="w-3 h-3 lg:w-4 lg:h-4 bg-white rounded-full"></div>
+              <div class="w-16 lg:w-20 h-3 lg:h-4 bg-white rounded-full"></div>
+              <div class="w-3 h-3 lg:w-4 lg:h-4 bg-white rounded-full"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="experience mt-80">
+          <h1 class="text-3xl lg:text-5xl font-bold text-end mr-[30rem] py-5 text-white ">
+            <span class="text-yellow-400">Exp</span>erience
+          </h1>
+
+          <div id="targerskill"
+            class="expirencecontainer rounded-xl w-96 lg:w-[40rem] h-32 lg:h-80  tracking-wide p-5 lg:p-10 place-self-end mr-80 bg-black">
+          </div>
+          <hr class="py-7" style="opacity: 0;" id="smtargetskill">
+        </div>
+
+
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#00cba9" fill-opacity="1" d="M0,96L1440,192L1440,0L0,0Z"></path>
+  </svg>
+  <hr style="opacity: 0;" id="skilltarget">
+
+
+  <div class="skills text-center text-white p-5 mt-32  lg:p-10">
+
+    <h1 class="text-2xl lg:text-3xl">Explore my</h1>
+    <h1 class="text-lime-400 text-3xl lg:text-5xl tracking-wider p-10 my-5 lg:p-8">Skills</h1>
+
+    <div class="tech py-10 mb-28 ">
+      <div class="flex justify-center gap-5 lg:gap-20 p-5 lg:p-8">
+        <div class="techtop cursor-pointer border p-3 w-60  rounded-3xl hover:bg-black hover:border-black shadow-xl">
+          data
+          analysis</div>
+        <div class="techtop cursor-pointer border p-3  w-60 rounded-3xl hover:bg-black hover:border-black shadow-xl">
+          data
+          analysis</div>
+        <div class="techtop cursor-pointer border p-3   w-60 rounded-3xl hover:bg-black hover:border-black shadow-xl">
+          data
+          analysis</div>
+      </div>
+
+      <div class="flex justify-center gap-10 lg:gap-20 p-5 lg:p-8">
+        <div class="texhbottom cursor-pointer border p-3 w-60 rounded-3xl hover:bg-black hover:border-black shadow-xl">
+          data
+          analysis</div>
+        <div class="texhbottom cursor-pointer border p-3 w-60 rounded-3xl hover:bg-black hover:border-black shadow-xl">
+          data
+          analysis</div>
+      </div>
+      <div class="tech">
+        <div class="flex justify-center gap-5 lg:gap-20 p-5 lg:p-8">
+          <div class="techtop cursor-pointer border p-3  w-60 rounded-3xl hover:bg-black hover:border-black shadow-xl">
+            data
+            analysis</div>
+          <div class="techtop cursor-pointer border p-3  w-60 rounded-3xl hover:bg-black hover:border-black shadow-xl">
+            data
+            analysis</div>
+          <div class="techtop cursor-pointer border p-3  w-60 rounded-3xl hover:bg-black hover:border-black shadow-xl">
+            data
+            analysis</div>
+        </div>
+      </div>
+    </div>
+    <hr style="opacity: 0;" id="targetproject">
+    <hr style="opacity: 0;" id="smtargetproject">
+
+
+
+
+    <div class="projects text-center p-10 lg:p-16">
+      <h1 class="text-white text-2xl lg:text-3xl">Browse My Recent</h1>
+      <h1 class="text-lime-400 text-3xl lg:text-5xl p-5 lg:p-8">Projects</h1>
+      <div class="flex justify-center">
+        <div
+          class="project1 rounded-xl w-96 lg:w-[40rem] h-32 lg:h-40 m-5 lg:m-8 text-white tracking-wide place-self-center bg-black">
+          <div class="design relative top-4 rounded-xl p-5 lg:p-8">
+          </div>
+          <div
+            class="w-36 lg:w-44 h-10 lg:h-12 align-middle items-center justify-center gap-1 mt-11 flex rounded-tr-xl rounded-br-xl rounded-bl-xl bg-white">
+          </div>
+        </div>
+
+        <div
+          class=" project2 rounded-xl w-96 lg:w-[40rem] h-32 lg:h-40 m-5 lg:m-8 text-white tracking-wide place-self-center bg-black">
+          <div class="design relative top-4 rounded-xl p-5 lg:p-8">
+          </div>
+          <div
+            class="w-36 lg:w-44 h-10 lg:h-12 align-middle items-center justify-center gap-1 mt-11 flex rounded-tr-xl rounded-br-xl rounded-bl-xl bg-white">
+          </div>
+        </div>
+
+      </div>
+      <div class="flex justify-center">
+        <div
+          class="project1 rounded-xl w-96 lg:w-[40rem] h-32 lg:h-40 m-5 lg:m-8 text-white tracking-wide place-self-center bg-black">
+          <div class="design relative top-4 rounded-xl p-5 lg:p-8">
+          </div>
+          <div
+            class="w-36 lg:w-44 h-10 lg:h-12 align-middle items-center justify-center gap-1 mt-11 flex rounded-tr-xl rounded-br-xl rounded-bl-xl bg-white">
+          </div>
+        </div>
+
+        <div
+          class=" project2 rounded-xl w-96 lg:w-[40rem] h-32 lg:h-40 m-5 lg:m-8 text-white tracking-wide place-self-center bg-black">
+          <div class="design relative top-4 rounded-xl p-5 lg:p-8">
+          </div>
+          <div
+            class="w-36 lg:w-44 h-10 lg:h-12 align-middle items-center justify-center gap-1 mt-11 flex rounded-tr-xl rounded-br-xl rounded-bl-xl bg-white">
+          </div>
+        </div>
+
+      </div>
+      <div
+        class="project1 rounded-xl w-96 lg:w-[40rem] h-32 lg:h-40 m-5 lg:m-8 text-white tracking-wide place-self-center bg-black">
+        <div class="design relative top-4 rounded-xl p-5 lg:p-8">
+        </div>
+        <div
+          class="w-36 lg:w-44 h-10 lg:h-12 align-middle items-center justify-center gap-1 mt-11 flex rounded-tr-xl rounded-br-xl rounded-bl-xl bg-white">
+        </div>
+      </div>
+
+    </div>
+    <hr style="opacity: 0; " id="certificatetarget">
+
+
+
+
+    <div id="" class="certificate p-5 lg:p-10 my-32 text-center">
+      <h1 class="text-white text-2xl lg:text-3xl">My</h1>
+      <h1 class="text-lime-400 text-3xl lg:text-5xl p-5 lg:p-8">Awards & Certificates</h1>
+      <div class="flex justify-center">
+        <div
+          class="certificate1 rounded-xl w-96 lg:w-[40rem] h-32 lg:h-40 m-5 lg:m-8 text-white tracking-wide place-self-center bg-black">
+        </div>
+
+        <div
+          class="certificate2 rounded-xl w-96 lg:w-[40rem] h-32 lg:h-40 m-5 lg:m-8 text-white tracking-wide place-self-center bg-black">
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div
+          class="certificate1 rounded-xl w-96 lg:w-[40rem] h-32 lg:h-40 m-5 lg:m-8 text-white tracking-wide place-self-center bg-black">
+        </div>
+
+        <div
+          class="certificate2 rounded-xl w-96 lg:w-[40rem] h-32 lg:h-40 m-5 lg:m-8 text-white tracking-wide place-self-center bg-black">
+        </div>
+      </div>
+
+
+      <hr style="opacity: 0; " id="smtargetcontact">
+      <hr style="opacity: 0; " id="">
+    </div>
+
+
+
+
+    <div id="targetcontact" class="contact p-5 lg:p-10 text-center">
+      <h1 class="text-white text-2xl lg:text-3xl">Get in Touch</h1>
+
+      <div class="w-60 lg:w-[30rem] mx-auto border-b-4 border-lime-400">
+        <h1 class="text-lime-400 text-3xl lg:text-5xl p-5 lg:p-8">Contact Me</h1>
+      </div>
+      <div class="flex justify-center">
+        <div class="p-10  place-content-center ">
+          <h1 class="text-white text-4xl lg:text-5xl pt-5">Let's Contact</h1>
+
+          <p
+            class="text-white w-96  lg:w-[40rem] text-justify text-xl lg:text-2xl px-5 pt-2 lg:pt-5 mx-auto  tracking-widest">
+            I'm a data analyst passionate about solving problems and helping others grow. Whether you need help with
+            data
+            insights, resume reviews, or optimizing your LinkedIn and Naukri Profiles, feel free to reach out. I'm also
+            open
+            to exploring new opportunities.
+            I'm a data analyst passionate about solving problems and helping others grow. Whether you need help with
+            data
+            insights, resume reviews, or optimizing your LinkedIn and Naukri Profiles, feel free to reach out. I'm also
+            open
+            to exploring new opportunities.
+          </p>
+
+        </div>
+
+        <div class="form block p-10 lg:p-16">
+          <form method="
+          post">
+            <input required type="text" id="name" placeholder="Name"
+              class="input1 bg-none px-16 lg:px-24 rounded-lg py-2 lg:py-3 mt-10 outline"> <br>
+            <input required type="email" id="email" placeholder="Email"
+              class="input2 bg-none px-16 lg:px-24 rounded-lg py-2 lg:py-3 mt-10 outline"> <br>
+            <input required type="tel" id="mobile" placeholder="Mobile Number"
+              class="input3 bg-none px-16 lg:px-24 rounded-lg py-2 lg:py-3 mt-10 outline"> <br>
+            <textarea name="message" id="message" placeholder="Feel Free to ask anything"
+              class=" p-5 input4 w-80 lg:w-[40rem] mx-auto rounded-lg h-60 lg:h-72 mt-10"></textarea> <br>
+            <button type="submit" id="submitBtn"
+              class="submit p-3 lg:p-4 px-8 lg:px-12 rounded-lg mt-5 bg-lime-400">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="footer w-screen text-white align-middle items-center  bg-black h-16 flex justify-between">
+    <div class="deveops text-center mx-auto ">
+      <h1 class="text-sm tracking-widest font-mono animate-pulse ">Developed by Dinesh</h1>
+    </div>
+  </div>
+
+
+  <script src="cssanimation/letteranimation.js"></script>
+  <script src="cssanimation/letteranimation.min.js"></script>
+
+
+  <script>
+
+
+
+
+
+    // ScrollReveal({
+    //   reset: false,
+    //   distance: '100px',
+    //   duration: 2500,
+    //   delay: 400
+    // });
+
+    // ScrollReveal().reveal('.weclcome', { delay: 200, origin: 'right' });
+    // ScrollReveal().reveal('.accupation', { delay: 200, origin: 'right' });
+    // ScrollReveal().reveal('.name', { delay: 200 });
+    // ScrollReveal().reveal('.image', { delay: 10, origin: 'top' });
+    // ScrollReveal().reveal('.aboutmecontainer', { delay: 100, origin: 'left' });
+    // ScrollReveal().reveal('.educationcontainer', { delay: 200, origin: 'right' });
+    // ScrollReveal().reveal('.expirencecontainer', { delay: 100, origin: 'left' });
+    // ScrollReveal().reveal('.techtop', { delay: 100, origin: 'top' });
+    // ScrollReveal().reveal('.texhbottom', { delay: 100, origin: 'bottom' });
+    // ScrollReveal().reveal('.project1', { delay: 200, origin: 'right' });
+    // ScrollReveal().reveal('.project2', { delay: 100, origin: 'left' });
+
+    // ScrollReveal().reveal('.certificate2', { delay: 2twe00, origin: 'right' });
+    // ScrollReveal().reveal('.certificate1', { delay: 100, origin: 'left' });
+
+    // ScrollReveal().reveal('.input1', { delay: 100efrfc  , origin: 'bottom' });
+    // ScrollReveal().reveal('.input2', { delay: 200, origin: 'bottom' });
+    // ScrollReveal().reveal('.input3', { delay: 300, origin: 'bottom' });
+    // ScrollReveal().reveal('.input4', { delay: 400, origin: 'bottom' });
+    // ScrollReveal().reveal('.submit', { delay: 100, origin: 'bottom' });
+
+
+    //     aboutborder
+    // skillborder
+    // projectborder
+    // certiborder
+    // contactborder
+
+    const homeborder = document.getElementById('homeborder');
+    const skillborder = document.getElementById('skillborder');
+    const aboutborder = document.getElementById('aboutborder');
+    const projectborder = document.getElementById('projectborder');
+    const certiborder = document.getElementById('certiborder');
+    const contactborder = document.getElementById('contactborder');
+
+
+    document.getElementById('homebtn').addEventListener('click', () => {
+      document.getElementById('herosection').scrollIntoView({ behavior: "smooth" })
+      homeborder.classList.add("border-b-4")
+      homeborder.classList.add("border-lime-500")
+      // others
+      contactborder.classList.remove("border-b-4")
+      contactborder.classList.remove("border-lime-500")
+      aboutborder.classList.remove("border-b-4")
+      aboutborder.classList.remove("border-lime-500")
+      skillborder.classList.remove("border-b-4")
+      skillborder.classList.remove("border-lime-500")
+      projectborder.classList.remove("border-b-4")
+      projectborder.classList.remove("border-lime-500")
+      certiborder.classList.remove("border-b-4")
+      certiborder.classList.remove("border-lime-500")
+
+    })
+    document.getElementById('aboutbtn').addEventListener('click', () => {
+      document.getElementById('abouttarget').scrollIntoView({ behavior: "smooth" })
+      aboutborder.classList.add("border-b-4")
+      aboutborder.classList.add("border-lime-500")
+      // ohters
+      contactborder.classList.remove("border-b-4")
+      contactborder.classList.remove("border-lime-500")
+      homeborder.classList.remove("border-b-4")
+      homeborder.classList.remove("border-lime-500")
+      skillborder.classList.remove("border-b-4")
+      skillborder.classList.remove("border-lime-500")
+      projectborder.classList.remove("border-b-4")
+      projectborder.classList.remove("border-lime-500")
+      certiborder.classList.remove("border-b-4")
+      certiborder.classList.remove("border-lime-500")
+
+
+
+
+    })
+    document.getElementById('skillbtn').addEventListener('click', () => {
+      document.getElementById('skilltarget').scrollIntoView({ behavior: "smooth" })
+      skillborder.classList.add("border-b-4")
+      skillborder.classList.add("border-lime-500")
+      // ohters
+      contactborder.classList.remove("border-b-4")
+      contactborder.classList.remove("border-lime-500")
+      homeborder.classList.remove("border-b-4")
+      homeborder.classList.remove("border-lime-500")
+      aboutborder.classList.remove("border-b-4")
+      aboutborder.classList.remove("border-lime-500")
+      projectborder.classList.remove("border-b-4")
+      projectborder.classList.remove("border-lime-500")
+      certiborder.classList.remove("border-b-4")
+      certiborder.classList.remove("border-lime-500")
+
+
+    })
+
+    document.getElementById('projectbtn').addEventListener('click', () => {
+      document.getElementById('targetproject').scrollIntoView({ behavior: "smooth" })
+      projectborder.classList.add("border-b-4")
+      projectborder.classList.add("border-lime-500")
+      // others
+      contactborder.classList.remove("border-b-4")
+      contactborder.classList.remove("border-lime-500")
+      homeborder.classList.remove("border-b-4")
+      homeborder.classList.remove("border-lime-500")
+      aboutborder.classList.remove("border-b-4")
+      aboutborder.classList.remove("border-lime-500")
+      skillborder.classList.remove("border-b-4")
+      skillborder.classList.remove("border-lime-500")
+      certiborder.classList.remove("border-b-4")
+      certiborder.classList.remove("border-lime-500")
+
+
+    })
+
+    document.getElementById('certificatbtn').addEventListener('click', () => {
+      document.getElementById('certificatetarget').scrollIntoView({ behavior: "smooth" })
+      certiborder.classList.add("border-b-4")
+      certiborder.classList.add("border-lime-500")
+      // others
+      homeborder.classList.remove("border-b-4")
+      homeborder.classList.remove("border-lime-500")
+      aboutborder.classList.remove("border-b-4")
+      aboutborder.classList.remove("border-lime-500")
+      skillborder.classList.remove("border-b-4")
+      skillborder.classList.remove("border-lime-500")
+      projectborder.classList.remove("border-b-4")
+      projectborder.classList.remove("border-lime-500")
+      contactborder.classList.remove("border-b-4")
+      contactborder.classList.remove("border-lime-500")
+
+
+    })
+
+    document.getElementById('contactbtn').addEventListener('click', () => {
+      document.getElementById('targetcontact').scrollIntoView({ behavior: "smooth" })
+      contactborder.classList.add("border-b-4")
+      contactborder.classList.add("border-lime-500")
+      // others
+      homeborder.classList.remove("border-b-4")
+      homeborder.classList.remove("border-lime-500")
+      aboutborder.classList.remove("border-b-4")
+      aboutborder.classList.remove("border-lime-500")
+      skillborder.classList.remove("border-b-4")
+      skillborder.classList.remove("border-lime-500")
+      projectborder.classList.remove("border-b-4")
+      projectborder.classList.remove("border-lime-500")
+      certiborder.classList.remove("border-b-4")
+      certiborder.classList.remove("border-lime-500")
+    })
+
+
+
+    document.getElementById('tothetopbtn').addEventListener('click', () => {
+      document.getElementById('herosection').scrollIntoView({ behavior: "smooth" })
+      
+    })
+
+
+    const menuToggle = document.getElementById('menuToggle');
+    const menubar = document.querySelector('.menubar');
+    const nav = document.getElementById('mouseleaveaction');
+
+    menubar.style.opacity = "0";
+
+
+    menuToggle.addEventListener('click', () => {
+      menubar.classList.toggle('open');
+      menubar.style.opacity = "1";
+      menubar.style.left = "150px"
+      menubar.style.width = "10rem"
+    });
+
+    nav.addEventListener('mouseleave', () => {
+      menubar.classList.remove('open');
+
+      menubar.style.opacity = "0";
+
+    });
+
+
+  </script>
+
+</body>
+
+</html>
